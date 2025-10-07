@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Craft & Beer - Redirigiendo al Catálogo</title>
+    <meta http-equiv="refresh" content="0; url=us01/catalogo.html">
+    <script>
+     
+      (function(){
+        var target = 'us01/catalogo.html';
+        try { window.location.replace(target); } catch(e) { window.location.href = target; }
+      })();
+    </script>
+    <style>
+      body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f8fafc; color:#0f172a }
+      .box { text-align:center; padding:1.25rem; border-radius:8px; background:white; box-shadow:0 6px 20px rgba(2,6,23,0.08); }
+      a { color:#0b5cff; text-decoration:underline }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Redirigiendo al Catálogo…</h1>
+      <p>Si la redirección no se aplica automáticamente, haz clic en este enlace:</p>
+      <p><a href="us01/catalogo.html">Abrir Catálogo (us01/catalogo.html)</a></p>
+    </div>
+  </body>
+</html>
