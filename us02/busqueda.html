@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Búsqueda y filtros de cervezas artesanales - Craft & Beer">
+    <title>Buscar Cervezas - Craft & Beer</title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#" title="Craft & Beer - Inicio">
+                <i class="bi bi-cup-hot"></i> Craft & Beer
+            </a>
+            
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">[LINK INICIO]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../us01/catalogo.html">[LINK CATÁLOGO]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">[LINK BÚSQUEDA]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">[LINK NOSOTROS]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">[LINK CONTACTO]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main class="main-content">
+        <div class="container-fluid">
+            
+            
+            <header class="search-header mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <h1 class="display-5 fw-bold text-center text-primary mb-4">Buscar Cervezas</h1>
+                        
+                        
+                        <div class="search-bar-container">
+                            <form class="search-form" role="search">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text" id="search-icon">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+                                    <input type="search" 
+                                           class="form-control" 
+                                           placeholder="Buscar cervezas..." 
+                                           aria-label="Buscar cervezas"
+                                           aria-describedby="search-icon">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="bi bi-search"></i> [BUSCAR]
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            
+            <div class="search-layout">
+                <div class="row g-4">
+                    
+                    
+                    <aside class="col-12 col-lg-3">
+                        <div class="filters-sidebar">
+                            
+                            
+                            <div class="filters-header">
+                                <h3 class="h5 fw-bold mb-3">
+                                    <i class="bi bi-funnel"></i> [FILTROS]
+                                </h3>
+                                <button type="button" class="btn btn-outline-secondary btn-sm mb-3">
+                                    <i class="bi bi-arrow-clockwise"></i> [LIMPIAR FILTROS]
+                                </button>
+                            </div>
+
+                            
+                            <div class="filter-group">
+                                <h4 class="h6 fw-semibold mb-3">[TIPO DE CERVEZA]</h4>
+                                <div class="filter-options">
+                                    
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="ipa" id="filter-ipa">
+                                        <label class="form-check-label" for="filter-ipa">
+                                            IPA <span class="text-muted">(12)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="stout" id="filter-stout">
+                                        <label class="form-check-label" for="filter-stout">
+                                            Stout <span class="text-muted">(8)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="lager" id="filter-lager">
+                                        <label class="form-check-label" for="filter-lager">
+                                            Lager <span class="text-muted">(15)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="pilsner" id="filter-pilsner">
+                                        <label class="form-check-label" for="filter-pilsner">
+                                            Pilsner <span class="text-muted">(6)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="ale" id="filter-ale">
+                                        <label class="form-check-label" for="filter-ale">
+                                            Ale <span class="text-muted">(10)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="wheat" id="filter-wheat">
+                                        <label class="form-check-label" for="filter-wheat">
+                                            Wheat <span class="text-muted">(7)</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            
+                            <div class="filter-group">
+                                <h4 class="h6 fw-semibold mb-3">[GRADUACIÓN ALCOHÓLICA]</h4>
+                                <div class="filter-options">
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="low" id="filter-low-alcohol">
+                                        <label class="form-check-label" for="filter-low-alcohol">
+                                            Baja (0-4%) <span class="text-muted">(5)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="medium" id="filter-medium-alcohol">
+                                        <label class="form-check-label" for="filter-medium-alcohol">
+                                            Media (4-7%) <span class="text-muted">(25)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="high" id="filter-high-alcohol">
+                                        <label class="form-check-label" for="filter-high-alcohol">
+                                            Alta (7%+) <span class="text-muted">(8)</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            
+                            <div class="filter-group">
+                                <h4 class="h6 fw-semibold mb-3">[RANGO DE PRECIO]</h4>
+                                <div class="filter-options">
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="budget" id="filter-budget">
+                                        <label class="form-check-label" for="filter-budget">
+                                            Económica (0-5€) <span class="text-muted">(12)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="mid" id="filter-mid-range">
+                                        <label class="form-check-label" for="filter-mid-range">
+                                            Media (5-10€) <span class="text-muted">(20)</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="premium" id="filter-premium">
+                                        <label class="form-check-label" for="filter-premium">
+                                            Premium (10€+) <span class="text-muted">(6)</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            
+                            <div class="filters-actions">
+                                <button type="button" class="btn btn-primary w-100 mb-2">
+                                    <i class="bi bi-check-circle"></i> [APLICAR FILTROS]
+                                </button>
+                                <small class="text-muted d-block text-center">
+                                    [MOSTRANDO X DE Y RESULTADOS]
+                                </small>
+                            </div>
+
+                        </div>
+                    </aside>
+
+                    
+                    <section class="col-12 col-lg-9">
+                        <div class="search-results">
+                            
+                            
+                            <div class="results-header">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <h2 class="h4 mb-1">[RESULTADOS DE BÚSQUEDA]</h2>
+                                        <p class="text-muted mb-0">[MOSTRANDO 24 DE 58 CERVEZAS]</p>
+                                    </div>
+                                    
+                                    
+                                    <div class="sort-dropdown">
+                                        <select class="form-select" aria-label="Ordenar resultados">
+                                            <option selected>[ORDENAR POR...]</option>
+                                            <option value="name">[NOMBRE A-Z]</option>
+                                            <option value="price-low">[PRECIO: MENOR A MAYOR]</option>
+                                            <option value="price-high">[PRECIO: MAYOR A MENOR]</option>
+                                            <option value="rating">[MEJOR VALORADAS]</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="results-grid">
+                                <div class="row g-4">
+                                    
+                                    
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="card product-card h-100">
+                                            
+                                            <div class="image-placeholder">
+                                                <span class="text-muted">[IMAGEN CERVEZA 1]</span>
+                                            </div>
+                                            
+                                            
+                                            <div class="card-body">
+                                                <div>
+                                                    <h5 class="card-title">[NOMBRE CERVEZA 1]</h5>
+                                                    <p class="card-text text-muted small">
+                                                        <span class="badge bg-secondary">[TIPO IPA]</span>
+                                                        <span class="ms-2">[5.2% VOL]</span>
+                                                    </p>
+                                                    <p class="card-text">[DESCRIPCIÓN BREVE]</p>
+                                                </div>
+                                                
+                                                
+                                                <div class="mt-auto">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span class="h5 text-primary mb-0">[7.50 €]</span>
+                                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="card product-card h-100">
+                                            <div class="image-placeholder">
+                                                <span class="text-muted">[IMAGEN CERVEZA 2]</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <h5 class="card-title">[NOMBRE CERVEZA 2]</h5>
+                                                    <p class="card-text text-muted small">
+                                                        <span class="badge bg-dark">[TIPO STOUT]</span>
+                                                        <span class="ms-2">[6.8% VOL]</span>
+                                                    </p>
+                                                    <p class="card-text">[DESCRIPCIÓN BREVE]</p>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span class="h5 text-primary mb-0">[8.90 €]</span>
+                                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="card product-card h-100">
+                                            <div class="image-placeholder">
+                                                <span class="text-muted">[IMAGEN CERVEZA 3]</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <h5 class="card-title">[NOMBRE CERVEZA 3]</h5>
+                                                    <p class="card-text text-muted small">
+                                                        <span class="badge bg-warning text-dark">[TIPO LAGER]</span>
+                                                        <span class="ms-2">[4.5% VOL]</span>
+                                                    </p>
+                                                    <p class="card-text">[DESCRIPCIÓN BREVE]</p>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span class="h5 text-primary mb-0">[5.20 €]</span>
+                                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="card product-card h-100">
+                                            <div class="image-placeholder">
+                                                <span class="text-muted">[IMAGEN CERVEZA 4]</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <h5 class="card-title">[NOMBRE CERVEZA 4]</h5>
+                                                    <p class="card-text text-muted small">
+                                                        <span class="badge bg-info">[TIPO ALE]</span>
+                                                        <span class="ms-2">[5.8% VOL]</span>
+                                                    </p>
+                                                    <p class="card-text">[DESCRIPCIÓN BREVE]</p>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span class="h5 text-primary mb-0">[6.75 €]</span>
+                                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="card product-card h-100">
+                                            <div class="image-placeholder">
+                                                <span class="text-muted">[IMAGEN CERVEZA 5]</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <h5 class="card-title">[NOMBRE CERVEZA 5]</h5>
+                                                    <p class="card-text text-muted small">
+                                                        <span class="badge bg-success">[TIPO WHEAT]</span>
+                                                        <span class="ms-2">[4.2% VOL]</span>
+                                                    </p>
+                                                    <p class="card-text">[DESCRIPCIÓN BREVE]</p>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span class="h5 text-primary mb-0">[6.30 €]</span>
+                                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="card product-card h-100">
+                                            <div class="image-placeholder">
+                                                <span class="text-muted">[IMAGEN CERVEZA 6]</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <h5 class="card-title">[NOMBRE CERVEZA 6]</h5>
+                                                    <p class="card-text text-muted small">
+                                                        <span class="badge bg-light text-dark">[TIPO PILSNER]</span>
+                                                        <span class="ms-2">[4.8% VOL]</span>
+                                                    </p>
+                                                    <p class="card-text">[DESCRIPCIÓN BREVE]</p>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span class="h5 text-primary mb-0">[5.90 €]</span>
+                                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> 
+                            </div>
+
+                            
+                            <nav aria-label="Navegación de páginas de búsqueda" class="mt-5">
+                                <ul class="pagination justify-content-center">
+                                    
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                            <i class="bi bi-chevron-left"></i> [ANTERIOR]
+                                        </a>
+                                    </li>
+                                    
+                                    
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    
+                                    
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            [SIGUIENTE] <i class="bi bi-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </section>
+
+                </div> 
+            </div>
+
+        </div> 
+    </main>
+
+    
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Craft & Beer. [DERECHOS RESERVADOS]</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">[TÉRMINOS]</a>
+                    <a href="#" class="text-light me-3">[PRIVACIDAD]</a>
+                    <a href="#" class="text-light">[CONTACTO]</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    
+    <script>
+
+        console.log('Página de búsqueda de Craft & Beer cargada correctamente');
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            
+
+            const applyFiltersBtn = document.querySelector('.filters-actions .btn-primary');
+            if (applyFiltersBtn) {
+                applyFiltersBtn.addEventListener('click', function() {
+                    console.log('Aplicando filtros...');
+
+                });
+            }
+            
+
+            const clearFiltersBtn = document.querySelector('.filters-header .btn-outline-secondary');
+            if (clearFiltersBtn) {
+                clearFiltersBtn.addEventListener('click', function() {
+                    console.log('Limpiando filtros...');
+
+                    const checkboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
+                    checkboxes.forEach(checkbox => checkbox.checked = false);
+                });
+            }
+            
+
+            const searchForm = document.querySelector('.search-form');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    console.log('Realizando búsqueda...');
+
+                });
+            }
+        });
+    </script>
+</body>
+</html>

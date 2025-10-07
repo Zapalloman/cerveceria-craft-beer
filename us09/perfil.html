@@ -1,0 +1,637 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de perfil y direcciones - Craft & Beer">
+    
+    
+    <title>Mi Perfil - Craft & Beer</title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                
+                <a class="navbar-brand fw-bold fs-3" href="#">
+                    <i class="bi bi-cup-hot me-2"></i>Craft & Beer
+                </a>
+                
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../us01/catalogo.html">[CATÁLOGO]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../us02/busqueda.html">[BÚSQUEDA]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle me-1"></i>[USUARIO]
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#"><i class="bi bi-person me-2"></i>[MI_PERFIL]</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-cart me-2"></i>[MIS_PEDIDOS]</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>[CERRAR_SESIÓN]</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="flex-grow-1 py-4">
+        <div class="container">
+            
+            
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#" class="text-decoration-none">
+                            <i class="bi bi-house me-1"></i>[INICIO]
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <i class="bi bi-person me-1"></i>[MI_PERFIL]
+                    </li>
+                </ol>
+            </nav>
+
+            
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="avatar-container me-3">
+                            <img src="https://via.placeholder.com/80x80/0d6efd/ffffff?text=U" 
+                                 alt="[AVATAR_USUARIO]" 
+                                 class="avatar-img rounded-circle">
+                            <button class="btn btn-sm btn-outline-primary avatar-edit-btn" type="button">
+                                <i class="bi bi-camera"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <h1 class="h2 mb-1 fw-bold">[NOMBRE_USUARIO]</h1>
+                            <p class="text-muted mb-0">
+                                <i class="bi bi-envelope me-1"></i>[EMAIL_USUARIO]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header bg-white border-bottom-0 pt-4 pb-0">
+                            
+                            <ul class="nav nav-tabs card-header-tabs" id="profileTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active fw-semibold" 
+                                            id="profile-tab" 
+                                            data-bs-toggle="tab" 
+                                            data-bs-target="#profile-pane" 
+                                            type="button" 
+                                            role="tab" 
+                                            aria-controls="profile-pane" 
+                                            aria-selected="true">
+                                        <i class="bi bi-person me-2"></i>[TAB_PERFIL]
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-semibold" 
+                                            id="addresses-tab" 
+                                            data-bs-toggle="tab" 
+                                            data-bs-target="#addresses-pane" 
+                                            type="button" 
+                                            role="tab" 
+                                            aria-controls="addresses-pane" 
+                                            aria-selected="false">
+                                        <i class="bi bi-geo-alt me-2"></i>[TAB_DIRECCIONES]
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                        <div class="card-body">
+                            <div class="tab-content" id="profileTabContent">
+                                
+                                
+                                <div class="tab-pane fade show active" 
+                                     id="profile-pane" 
+                                     role="tabpanel" 
+                                     aria-labelledby="profile-tab" 
+                                     tabindex="0">
+                                    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3 class="h4 mb-4 fw-bold">
+                                                <i class="bi bi-person-gear me-2 text-primary"></i>[TITULO_INFORMACION_PERSONAL]
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <form id="profileForm" novalidate>
+                                        <div class="row">
+                                            
+                                            
+                                            <div class="col-12 col-md-6 mb-4">
+                                                <label for="fullName" class="form-label fw-semibold">
+                                                    <i class="bi bi-person me-1"></i>[LABEL_NOMBRE_COMPLETO]
+                                                </label>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-person"></i>
+                                                    </span>
+                                                    <input type="text" 
+                                                           class="form-control" 
+                                                           id="fullName" 
+                                                           value="[VALOR_NOMBRE_ACTUAL]" 
+                                                           placeholder="[PLACEHOLDER_NOMBRE]" 
+                                                           required>
+                                                    <div class="valid-feedback">
+                                                        <i class="bi bi-check-circle-fill"></i> [MENSAJE_NOMBRE_VALIDO]
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_NOMBRE]
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-12 col-md-6 mb-4">
+                                                <label for="email" class="form-label fw-semibold">
+                                                    <i class="bi bi-envelope me-1"></i>[LABEL_EMAIL]
+                                                </label>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-envelope"></i>
+                                                    </span>
+                                                    <input type="email" 
+                                                           class="form-control" 
+                                                           id="email" 
+                                                           value="[VALOR_EMAIL_ACTUAL]" 
+                                                           placeholder="[PLACEHOLDER_EMAIL]" 
+                                                           required>
+                                                    <div class="valid-feedback">
+                                                        <i class="bi bi-check-circle-fill"></i> [MENSAJE_EMAIL_VALIDO]
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_EMAIL]
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-12 col-md-6 mb-4">
+                                                <label for="phone" class="form-label fw-semibold">
+                                                    <i class="bi bi-telephone me-1"></i>[LABEL_TELEFONO]
+                                                </label>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-telephone"></i>
+                                                    </span>
+                                                    <input type="tel" 
+                                                           class="form-control" 
+                                                           id="phone" 
+                                                           value="[VALOR_TELEFONO_ACTUAL]" 
+                                                           placeholder="[PLACEHOLDER_TELEFONO]" 
+                                                           required>
+                                                    <div class="valid-feedback">
+                                                        <i class="bi bi-check-circle-fill"></i> [MENSAJE_TELEFONO_VALIDO]
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_TELEFONO]
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="col-12 col-md-6 mb-4">
+                                                <label for="birthDate" class="form-label fw-semibold">
+                                                    <i class="bi bi-calendar me-1"></i>[LABEL_FECHA_NACIMIENTO]
+                                                </label>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-calendar"></i>
+                                                    </span>
+                                                    <input type="date" 
+                                                           class="form-control" 
+                                                           id="birthDate" 
+                                                           value="[VALOR_FECHA_ACTUAL]">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        
+                                        <div class="row mt-3">
+                                            <div class="col-12">
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <button type="submit" class="btn btn-primary btn-lg">
+                                                        <i class="bi bi-check-lg me-2"></i>[BOTON_GUARDAR_CAMBIOS]
+                                                    </button>
+                                                    <button type="reset" class="btn btn-outline-secondary btn-lg">
+                                                        <i class="bi bi-arrow-clockwise me-2"></i>[BOTON_RESTABLECER]
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    
+                                    <div class="row mt-5">
+                                        <div class="col-12">
+                                            <hr class="my-4">
+                                            <h4 class="h5 mb-3 fw-bold">
+                                                <i class="bi bi-gear me-2 text-primary"></i>[TITULO_CONFIGURACION_CUENTA]
+                                            </h4>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button class="btn btn-outline-warning" type="button">
+                                                    <i class="bi bi-key me-2"></i>[BOTON_CAMBIAR_PASSWORD]
+                                                </button>
+                                                <button class="btn btn-outline-info" type="button">
+                                                    <i class="bi bi-bell me-2"></i>[BOTON_NOTIFICACIONES]
+                                                </button>
+                                                <button class="btn btn-outline-danger" type="button">
+                                                    <i class="bi bi-trash me-2"></i>[BOTON_ELIMINAR_CUENTA]
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="tab-pane fade" 
+                                     id="addresses-pane" 
+                                     role="tabpanel" 
+                                     aria-labelledby="addresses-tab" 
+                                     tabindex="0">
+                                    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                                <h3 class="h4 mb-0 fw-bold">
+                                                    <i class="bi bi-geo-alt me-2 text-primary"></i>[TITULO_MIS_DIRECCIONES]
+                                                </h3>
+                                                
+                                                <button class="btn btn-primary" 
+                                                        type="button" 
+                                                        data-bs-toggle="modal" 
+                                                        data-bs-target="#addAddressModal">
+                                                    <i class="bi bi-plus-lg me-2"></i>[BOTON_AGREGAR_DIRECCION]
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="row">
+                                        
+                                        
+                                        <div class="col-12 col-lg-6 mb-4">
+                                            <div class="card h-100 address-card">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                                        <div class="address-type">
+                                                            <span class="badge bg-primary">
+                                                                <i class="bi bi-house me-1"></i>[TIPO_CASA]
+                                                            </span>
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" 
+                                                                    type="button" 
+                                                                    data-bs-toggle="dropdown">
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>[EDITAR]</a></li>
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>[PREDETERMINADA]</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>[ELIMINAR]</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="address-info">
+                                                        <h5 class="card-title mb-2">[NOMBRE_DIRECCION_1]</h5>
+                                                        <p class="card-text mb-2">
+                                                            <i class="bi bi-geo-alt me-2 text-muted"></i>
+                                                            [CALLE_DIRECCION_1]<br>
+                                                            <span class="ms-4">[CIUDAD_DIRECCION_1], [CODIGO_POSTAL_1]</span>
+                                                        </p>
+                                                        <p class="card-text">
+                                                            <i class="bi bi-telephone me-2 text-muted"></i>
+                                                            [TELEFONO_DIRECCION_1]
+                                                        </p>
+                                                        <div class="address-default">
+                                                            <i class="bi bi-star-fill text-warning me-1"></i>
+                                                            <small class="text-muted">[DIRECCION_PREDETERMINADA]</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="col-12 col-lg-6 mb-4">
+                                            <div class="card h-100 address-card">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                                        <div class="address-type">
+                                                            <span class="badge bg-success">
+                                                                <i class="bi bi-building me-1"></i>[TIPO_OFICINA]
+                                                            </span>
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" 
+                                                                    type="button" 
+                                                                    data-bs-toggle="dropdown">
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>[EDITAR]</a></li>
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>[PREDETERMINADA]</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>[ELIMINAR]</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="address-info">
+                                                        <h5 class="card-title mb-2">[NOMBRE_DIRECCION_2]</h5>
+                                                        <p class="card-text mb-2">
+                                                            <i class="bi bi-geo-alt me-2 text-muted"></i>
+                                                            [CALLE_DIRECCION_2]<br>
+                                                            <span class="ms-4">[CIUDAD_DIRECCION_2], [CODIGO_POSTAL_2]</span>
+                                                        </p>
+                                                        <p class="card-text">
+                                                            <i class="bi bi-telephone me-2 text-muted"></i>
+                                                            [TELEFONO_DIRECCION_2]
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="col-12 col-lg-6 mb-4">
+                                            <div class="card h-100 add-address-card text-center border-dashed">
+                                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                    <i class="bi bi-plus-circle text-muted mb-3" style="font-size: 3rem;"></i>
+                                                    <h5 class="card-title text-muted mb-2">[TITULO_AGREGAR_NUEVA]</h5>
+                                                    <p class="card-text text-muted mb-3">[DESCRIPCION_AGREGAR_DIRECCION]</p>
+                                                    <button class="btn btn-outline-primary" 
+                                                            type="button" 
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#addAddressModal">
+                                                        <i class="bi bi-plus me-2"></i>[AGREGAR_DIRECCION]
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    
+    <div class="modal fade" id="addAddressModal" tabindex="-1" aria-labelledby="addAddressModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 fw-bold" id="addAddressModalLabel">
+                        <i class="bi bi-plus-circle me-2 text-primary"></i>[TITULO_MODAL_AGREGAR_DIRECCION]
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <form id="addAddressForm" novalidate>
+                        
+                        
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">
+                                    <i class="bi bi-tags me-1"></i>[LABEL_TIPO_DIRECCION]
+                                </label>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="radio" class="btn-check" name="addressType" id="typeHome" value="home" checked>
+                                    <label class="btn btn-outline-primary" for="typeHome">
+                                        <i class="bi bi-house me-1"></i>[TIPO_CASA]
+                                    </label>
+                                    
+                                    <input type="radio" class="btn-check" name="addressType" id="typeOffice" value="office">
+                                    <label class="btn btn-outline-success" for="typeOffice">
+                                        <i class="bi bi-building me-1"></i>[TIPO_OFICINA]
+                                    </label>
+                                    
+                                    <input type="radio" class="btn-check" name="addressType" id="typeOther" value="other">
+                                    <label class="btn btn-outline-info" for="typeOther">
+                                        <i class="bi bi-geo me-1"></i>[TIPO_OTRO]
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            
+                            
+                            <div class="col-12 mb-3">
+                                <label for="addressName" class="form-label fw-semibold">
+                                    <i class="bi bi-bookmark me-1"></i>[LABEL_NOMBRE_DIRECCION]
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="addressName" 
+                                       placeholder="[PLACEHOLDER_NOMBRE_DIRECCION]" 
+                                       required>
+                                <div class="form-text">[AYUDA_NOMBRE_DIRECCION]</div>
+                            </div>
+
+                            
+                            <div class="col-12 mb-3">
+                                <label for="street" class="form-label fw-semibold">
+                                    <i class="bi bi-signpost me-1"></i>[LABEL_CALLE_NUMERO]
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="street" 
+                                       placeholder="[PLACEHOLDER_CALLE_NUMERO]" 
+                                       required>
+                            </div>
+
+                            
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="city" class="form-label fw-semibold">
+                                    <i class="bi bi-building me-1"></i>[LABEL_CIUDAD]
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="city" 
+                                       placeholder="[PLACEHOLDER_CIUDAD]" 
+                                       required>
+                            </div>
+
+                            
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="postalCode" class="form-label fw-semibold">
+                                    <i class="bi bi-mailbox me-1"></i>[LABEL_CODIGO_POSTAL]
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="postalCode" 
+                                       placeholder="[PLACEHOLDER_CODIGO_POSTAL]" 
+                                       required>
+                            </div>
+
+                            
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="state" class="form-label fw-semibold">
+                                    <i class="bi bi-map me-1"></i>[LABEL_PROVINCIA]
+                                </label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">[SELECCIONAR_PROVINCIA]</option>
+                                    <option value="provincia1">[PROVINCIA_1]</option>
+                                    <option value="provincia2">[PROVINCIA_2]</option>
+                                    <option value="provincia3">[PROVINCIA_3]</option>
+                                </select>
+                            </div>
+
+                            
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="country" class="form-label fw-semibold">
+                                    <i class="bi bi-globe me-1"></i>[LABEL_PAIS]
+                                </label>
+                                <select class="form-select" id="country" required>
+                                    <option value="ES" selected>[ESPAÑA]</option>
+                                    <option value="US">[ESTADOS_UNIDOS]</option>
+                                    <option value="MX">[MEXICO]</option>
+                                </select>
+                            </div>
+
+                            
+                            <div class="col-12 mb-3">
+                                <label for="addressPhone" class="form-label fw-semibold">
+                                    <i class="bi bi-telephone me-1"></i>[LABEL_TELEFONO_CONTACTO]
+                                </label>
+                                <input type="tel" 
+                                       class="form-control" 
+                                       id="addressPhone" 
+                                       placeholder="[PLACEHOLDER_TELEFONO_CONTACTO]">
+                                <div class="form-text">[AYUDA_TELEFONO_CONTACTO]</div>
+                            </div>
+
+                            
+                            <div class="col-12 mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="isDefault">
+                                    <label class="form-check-label fw-semibold" for="isDefault">
+                                        <i class="bi bi-star me-1"></i>[ESTABLECER_COMO_PREDETERMINADA]
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="bi bi-x-lg me-2"></i>[CANCELAR]
+                    </button>
+                    <button type="submit" form="addAddressForm" class="btn btn-primary">
+                        <i class="bi bi-check-lg me-2"></i>[GUARDAR_DIRECCION]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-dark text-light py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Craft & Beer. [TODOS_DERECHOS_RESERVADOS]</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script>
+
+        console.log('[JAVASCRIPT_TABS_PLACEHOLDER]');
+        
+
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+        });
+        
+
+        document.getElementById('addAddressForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+        });
+        
+
+        document.querySelectorAll('.address-card').forEach(card => {
+
+        });
+        
+
+        const triggerTabList = document.querySelectorAll('#profileTabs button');
+        triggerTabList.forEach(triggerEl => {
+            const tabTrigger = new bootstrap.Tab(triggerEl);
+            triggerEl.addEventListener('click', event => {
+                event.preventDefault();
+
+            });
+        });
+    </script>
+</body>
+</html>
