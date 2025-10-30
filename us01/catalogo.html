@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold" href="../index.html">
                 <i class="bi bi-cup-hot me-2"></i>Craft & Beer
             </a>
             
@@ -34,19 +34,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">[INICIO]</a>
+                        <a class="nav-link" href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">[CATÁLOGO]</a>
+                        <a class="nav-link active" href="catalogo.html">Catálogo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../us02/busqueda.html">[BUSCAR CERVEZAS]</a>
+                        <a class="nav-link" href="../us02/busqueda.html">Buscar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">[NOSOTROS]</a>
+                        <a class="nav-link" href="../us04/carrito.html">
+                            <i class="bi bi-cart3"></i> Carrito
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">[CONTACTO]</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> Mi Cuenta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../us09/perfil.html">Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="../us10/pedidos.html">Mis Pedidos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../us06/registro.html">Registrarse</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -61,8 +71,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="display-4 fw-bold text-primary mb-3">Nuestras Cervezas</h1>
-                        <p class="lead text-muted">[TEXTO DESCRIPTIVO DEL CATÁLOGO]</p>
+                        <h1 class="display-4 fw-bold text-primary mb-3">Nuestras Cervezas Artesanales</h1>
+                        <p class="lead text-muted">Descubre nuestra selección de cervezas artesanales premium, elaboradas con los mejores ingredientes y pasión por la tradición cervecera.</p>
                     </div>
                 </div>
             </div>
@@ -74,17 +84,19 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="filter-bar d-flex flex-wrap justify-content-center gap-2 mb-4">
-                            <button class="btn btn-outline-primary">[FILTRO: TODAS]</button>
-                            <button class="btn btn-outline-secondary">[FILTRO: LAGER]</button>
-                            <button class="btn btn-outline-secondary">[FILTRO: ALE]</button>
-                            <button class="btn btn-outline-secondary">[FILTRO: STOUT]</button>
+                            <button class="btn btn-primary">Todas</button>
+                            <button class="btn btn-outline-secondary">Lager</button>
+                            <button class="btn btn-outline-secondary">Ale</button>
+                            <button class="btn btn-outline-secondary">IPA</button>
+                            <button class="btn btn-outline-secondary">Stout</button>
+                            <button class="btn btn-outline-secondary">Porter</button>
                             
                             
                             <div class="vr mx-2"></div>
                             
                             
                             <a href="../us02/busqueda.html" class="btn btn-outline-info" title="Búsqueda avanzada">
-                                <i class="bi bi-search"></i>
+                                <i class="bi bi-search"></i> Búsqueda Avanzada
                             </a>
                         </div>
                     </div>
@@ -98,189 +110,221 @@
             <div class="container">
                 <div class="row g-4">
                     
-                    
+                    <!-- Product 1: Golden Lager -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
                             
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Golden Lager">
                             
                             
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Golden Lager</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Lager</p>
+                                <p class="card-text flex-grow-1">Cerveza rubia de fermentación baja, refrescante y equilibrada con notas suaves de malta.</p>
                                 
                                 
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$3.500</span>
+                                        <a href="../us03/detalle.html?id=1" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 2: Amber Ale -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Amber Ale">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Amber Ale</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Ale</p>
+                                <p class="card-text flex-grow-1">Ale ámbar con carácter maltoso, toques caramelizados y un final ligeramente amargo.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$4.200</span>
+                                        <a href="../us03/detalle.html?id=2" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 3: Imperial Stout -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Imperial Stout">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Imperial Stout</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Stout</p>
+                                <p class="card-text flex-grow-1">Stout oscura e intensa con notas de café, chocolate y un cuerpo robusto y cremoso.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$5.800</span>
+                                        <a href="../us03/detalle.html?id=3" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 4: West Coast IPA -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="West Coast IPA">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">West Coast IPA</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> IPA</p>
+                                <p class="card-text flex-grow-1">IPA con intenso amargor, aromas cítricos y tropicales, y un final seco y refrescante.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$4.800</span>
+                                        <a href="../us03/detalle.html?id=4" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 5: Hazy IPA -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Hazy IPA">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Hazy IPA</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> IPA</p>
+                                <p class="card-text flex-grow-1">IPA turbia con textura sedosa, sabores jugosos de frutas tropicales y bajo amargor.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$5.200</span>
+                                        <a href="../us03/detalle.html?id=5" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 6: Baltic Porter -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Baltic Porter">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Baltic Porter</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Porter</p>
+                                <p class="card-text flex-grow-1">Porter oscura con sabores complejos de caramelo, frutos secos y un toque de licor.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$5.500</span>
+                                        <a href="../us03/detalle.html?id=6" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 7: Pilsner Bohemia -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Pilsner Bohemia">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Pilsner Bohemia</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Lager</p>
+                                <p class="card-text flex-grow-1">Pilsner clásica con amargor noble de lúpulo, cuerpo ligero y final crujiente.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$3.800</span>
+                                        <a href="../us03/detalle.html?id=7" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <!-- Product 8: Belgian Tripel -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="card product-card h-100 shadow-sm">
-                            <div class="card-img-wrapper">
-                                <div class="placeholder-img d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-image text-muted"></i>
-                                    <span class="text-muted ms-2">[IMAGEN]</span>
-                                </div>
-                            </div>
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Belgian Tripel">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-primary">[NOMBRE CERVEZA]</h5>
-                                <p class="card-text text-muted small mb-2">[TIPO DE CERVEZA]</p>
-                                <p class="card-text flex-grow-1">[DESCRIPCIÓN BREVE]</p>
+                                <h5 class="card-title text-primary">Belgian Tripel</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Ale</p>
+                                <p class="card-text flex-grow-1">Ale belga dorada con alta graduación, notas especiadas y un final seco y afrutado.</p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <span class="h5 text-success mb-0">$[PRECIO]</span>
-                                        <button class="btn btn-primary btn-sm">[VER DETALLES]</button>
+                                        <span class="h5 text-success mb-0">$6.200</span>
+                                        <a href="../us03/detalle.html?id=8" class="btn btn-primary btn-sm">Ver Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9: Milk Stout -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card product-card h-100 shadow-sm">
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Milk Stout">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary">Milk Stout</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Stout</p>
+                                <p class="card-text flex-grow-1">Stout cremosa con lactosa, sabores dulces de chocolate y café, textura aterciopelada.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-success mb-0">$4.900</span>
+                                        <a href="../us03/detalle.html?id=9" class="btn btn-primary btn-sm">Ver Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10: Session IPA -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card product-card h-100 shadow-sm">
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Session IPA">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary">Session IPA</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> IPA</p>
+                                <p class="card-text flex-grow-1">IPA ligera y refrescante con aromas lupulados intensos pero bajo contenido alcohólico.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-success mb-0">$4.000</span>
+                                        <a href="../us03/detalle.html?id=10" class="btn btn-primary btn-sm">Ver Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 11: Smoked Porter -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card product-card h-100 shadow-sm">
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Smoked Porter">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary">Smoked Porter</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Porter</p>
+                                <p class="card-text flex-grow-1">Porter ahumada con malta tostada, notas de madera y un carácter distintivo y complejo.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-success mb-0">$5.600</span>
+                                        <a href="../us03/detalle.html?id=11" class="btn btn-primary btn-sm">Ver Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 12: Hefeweizen -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card product-card h-100 shadow-sm">
+                            <img src="/placeholder.svg?height=300&width=300" class="card-img-top" alt="Hefeweizen">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary">Hefeweizen</h5>
+                                <p class="card-text text-muted small mb-2"><i class="bi bi-tag-fill"></i> Ale</p>
+                                <p class="card-text flex-grow-1">Cerveza de trigo alemana con aromas de plátano y clavo, refrescante y ligeramente turbia.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-success mb-0">$4.400</span>
+                                        <a href="../us03/detalle.html?id=12" class="btn btn-primary btn-sm">Ver Detalles</a>
                                     </div>
                                 </div>
                             </div>
@@ -298,10 +342,9 @@
                     <div class="col-12">
                         <nav aria-label="Navegación del catálogo">
                             <ul class="pagination justify-content-center">
-                                <li class="page-item">
+                                <li class="page-item disabled">
                                     <a class="page-link" href="#" aria-label="Anterior">
                                         <span aria-hidden="true">&laquo;</span>
-                                        <span class="sr-only">Previous</span>
                                     </a>
                                 </li>
                                 <li class="page-item active">
@@ -316,7 +359,6 @@
                                 <li class="page-item">
                                     <a class="page-link" href="#" aria-label="Siguiente">
                                         <span aria-hidden="true">&raquo;</span>
-                                        <span class="sr-only">Next</span>
                                     </a>
                                 </li>
                             </ul>
@@ -332,8 +374,29 @@
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
             <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold"><i class="bi bi-cup-hot me-2"></i>Craft & Beer</h5>
+                    <p class="small">Cervezas artesanales premium desde 2020</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h6 class="fw-bold">Enlaces</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="catalogo.html" class="text-light text-decoration-none">Catálogo</a></li>
+                        <li><a href="../us02/busqueda.html" class="text-light text-decoration-none">Buscar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Contacto</h6>
+                    <p class="small mb-1"><i class="bi bi-envelope"></i> info@craftbeer.cl</p>
+                    <p class="small mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+                    <p class="small"><i class="bi bi-geo-alt"></i> Santiago, Chile</p>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="row">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Craft & Beer. [TODOS LOS DERECHOS RESERVADOS]</p>
+                    <p class="mb-0 small">&copy; 2025 Craft & Beer. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>

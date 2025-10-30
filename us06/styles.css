@@ -1,6 +1,3 @@
-﻿
-
-
 :root {
     --primary-color: #0d6efd;
     --primary-hover: #0b5ed7;
@@ -512,5 +509,3 @@ footer {
 .border-radius-custom {
     border-radius: var(--border-radius);
 }
-
-

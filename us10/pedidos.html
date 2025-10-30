@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     
@@ -22,11 +22,12 @@
 <body class="d-flex flex-column min-vh-100">
     
     
+    <!-- Updated navigation to match other pages -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
             <div class="container">
                 
-                <a class="navbar-brand fw-bold fs-3" href="#">
+                <a class="navbar-brand fw-bold" href="../index.html">
                     <i class="bi bi-cup-hot me-2"></i>Craft & Beer
                 </a>
                 
@@ -39,20 +40,28 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="../us01/catalogo.html">[CATÁLOGO]</a>
+                            <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../us02/busqueda.html">[BÚSQUEDA]</a>
+                            <a class="nav-link" href="../us01/catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../us02/busqueda.html">Buscar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../us04/carrito.html">
+                                <i class="bi bi-cart3"></i> Carrito
+                            </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle me-1"></i>[USUARIO]
+                                <i class="bi bi-person-circle me-1"></i>Juan Pérez
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../us09/perfil.html"><i class="bi bi-person me-2"></i>[MI_PERFIL]</a></li>
-                                <li><a class="dropdown-item active" href="#"><i class="bi bi-cart me-2"></i>[MIS_PEDIDOS]</a></li>
+                                <li><a class="dropdown-item" href="../us09/perfil.html"><i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+                                <li><a class="dropdown-item active" href="pedidos.html"><i class="bi bi-cart me-2"></i>Mis Pedidos</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>[CERRAR_SESIÓN]</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -62,6 +71,7 @@
     </header>
 
     
+    <!-- Replaced all placeholders with real order data -->
     <main class="flex-grow-1 py-4">
         <div class="container">
             
@@ -69,12 +79,12 @@
             <nav aria-label="breadcrumb" class="mb-4">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-decoration-none">
-                            <i class="bi bi-house me-1"></i>[INICIO]
+                        <a href="../index.html" class="text-decoration-none">
+                            <i class="bi bi-house me-1"></i>Inicio
                         </a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <i class="bi bi-cart me-1"></i>[MIS_PEDIDOS]
+                        <i class="bi bi-cart me-1"></i>Mis Pedidos
                     </li>
                 </ol>
             </nav>
@@ -85,29 +95,29 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4">
                         <div>
                             <h1 class="h2 mb-2 fw-bold text-primary">
-                                <i class="bi bi-cart-check me-2"></i>[TITULO_MIS_PEDIDOS]
+                                <i class="bi bi-cart-check me-2"></i>Mis Pedidos
                             </h1>
                             <p class="text-muted mb-0">
-                                <i class="bi bi-info-circle me-1"></i>[DESCRIPCION_HISTORIAL_PEDIDOS]
+                                <i class="bi bi-info-circle me-1"></i>Revisa el estado y detalles de todos tus pedidos
                             </p>
                         </div>
                         
                         <div class="d-flex flex-wrap gap-2 mt-3 mt-md-0">
                             <div class="dropdown">
                                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    <i class="bi bi-funnel me-1"></i>[FILTRAR_POR]
+                                    <i class="bi bi-funnel me-1"></i>Filtrar por
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar me-2"></i>[ESTE_MES]</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar3 me-2"></i>[ULTIMOS_3_MESES]</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-year me-2"></i>[ESTE_AÑO]</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar me-2"></i>Este mes</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar3 me-2"></i>Últimos 3 meses</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-year me-2"></i>Este año</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check-circle me-2"></i>[ENTREGADOS]</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-clock me-2"></i>[EN_PROCESO]</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-check-circle me-2"></i>Entregados</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-clock me-2"></i>En proceso</a></li>
                                 </ul>
                             </div>
                             <button class="btn btn-outline-info" type="button">
-                                <i class="bi bi-download me-1"></i>[EXPORTAR]
+                                <i class="bi bi-download me-1"></i>Exportar
                             </button>
                         </div>
                     </div>
@@ -120,8 +130,8 @@
                     <div class="card stats-card text-center border-0 shadow-sm">
                         <div class="card-body py-3">
                             <i class="bi bi-cart-check text-primary fs-2 mb-2"></i>
-                            <h3 class="h4 mb-1 fw-bold">[NUMERO_TOTAL_PEDIDOS]</h3>
-                            <p class="text-muted small mb-0">[TOTAL_PEDIDOS]</p>
+                            <h3 class="h4 mb-1 fw-bold">15</h3>
+                            <p class="text-muted small mb-0">Total Pedidos</p>
                         </div>
                     </div>
                 </div>
@@ -129,8 +139,8 @@
                     <div class="card stats-card text-center border-0 shadow-sm">
                         <div class="card-body py-3">
                             <i class="bi bi-check-circle text-success fs-2 mb-2"></i>
-                            <h3 class="h4 mb-1 fw-bold">[NUMERO_ENTREGADOS]</h3>
-                            <p class="text-muted small mb-0">[PEDIDOS_ENTREGADOS]</p>
+                            <h3 class="h4 mb-1 fw-bold">12</h3>
+                            <p class="text-muted small mb-0">Entregados</p>
                         </div>
                     </div>
                 </div>
@@ -138,8 +148,8 @@
                     <div class="card stats-card text-center border-0 shadow-sm">
                         <div class="card-body py-3">
                             <i class="bi bi-clock text-warning fs-2 mb-2"></i>
-                            <h3 class="h4 mb-1 fw-bold">[NUMERO_EN_PROCESO]</h3>
-                            <p class="text-muted small mb-0">[PEDIDOS_EN_PROCESO]</p>
+                            <h3 class="h4 mb-1 fw-bold">2</h3>
+                            <p class="text-muted small mb-0">En Proceso</p>
                         </div>
                     </div>
                 </div>
@@ -147,8 +157,8 @@
                     <div class="card stats-card text-center border-0 shadow-sm">
                         <div class="card-body py-3">
                             <i class="bi bi-currency-dollar text-info fs-2 mb-2"></i>
-                            <h3 class="h4 mb-1 fw-bold">[TOTAL_GASTADO]</h3>
-                            <p class="text-muted small mb-0">[MONTO_TOTAL]</p>
+                            <h3 class="h4 mb-1 fw-bold">$285.400</h3>
+                            <p class="text-muted small mb-0">Total Gastado</p>
                         </div>
                     </div>
                 </div>
@@ -159,31 +169,32 @@
                 <div class="col-12">
                     
                     
+                    <!-- Order 1: Delivered -->
                     <div class="card order-card mb-3 shadow-sm border-0">
                         <div class="card-body">
                             <div class="row align-items-center">
                                 
                                 <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-number">
-                                        <h5 class="mb-1 fw-bold text-primary">[NUMERO_ORDEN_1]</h5>
-                                        <small class="text-muted">[FECHA_PEDIDO_1]</small>
+                                        <h5 class="mb-1 fw-bold text-primary">#ORD-2025-0156</h5>
+                                        <small class="text-muted">15 Ene 2025</small>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <span class="badge bg-success fs-6 px-3 py-2 rounded-pill">
-                                        <i class="bi bi-check-circle me-1"></i>[ESTADO_ENTREGADO]
+                                        <i class="bi bi-check-circle me-1"></i>Entregado
                                     </span>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-4 col-lg-4 mb-3 mb-md-0">
                                     <div class="order-details">
-                                        <p class="mb-1 fw-semibold">[PRODUCTOS_PEDIDO_1]</p>
+                                        <p class="mb-1 fw-semibold">Golden Lager x2, West Coast IPA x1</p>
                                         <small class="text-muted">
-                                            <i class="bi bi-box me-1"></i>[CANTIDAD_ITEMS_1] [ITEMS] • 
-                                            <i class="bi bi-truck me-1"></i>[METODO_ENVIO_1]
+                                            <i class="bi bi-box me-1"></i>3 items • 
+                                            <i class="bi bi-truck me-1"></i>Envío estándar
                                         </small>
                                     </div>
                                 </div>
@@ -191,9 +202,9 @@
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-total text-center text-md-start">
-                                        <h5 class="mb-1 fw-bold">[TOTAL_PEDIDO_1]</h5>
+                                        <h5 class="mb-1 fw-bold">$11.800</h5>
                                         <small class="text-success">
-                                            <i class="bi bi-check-lg me-1"></i>[PAGADO]
+                                            <i class="bi bi-check-lg me-1"></i>Pagado
                                         </small>
                                     </div>
                                 </div>
@@ -202,16 +213,16 @@
                                 <div class="col-12 col-md-1 col-lg-2 text-center text-md-end">
                                     <div class="d-flex flex-column gap-2">
                                         <button class="btn btn-primary btn-sm" type="button">
-                                            <i class="bi bi-eye me-1"></i>[VER_DETALLES]
+                                            <i class="bi bi-eye me-1"></i>Ver Detalles
                                         </button>
                                         <div class="dropdown">
                                             <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-receipt me-2"></i>[DESCARGAR_FACTURA]</a></li>
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat me-2"></i>[VOLVER_A_PEDIR]</a></li>
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots me-2"></i>[SOPORTE]</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-receipt me-2"></i>Descargar Factura</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat me-2"></i>Volver a Pedir</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots me-2"></i>Soporte</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -221,38 +232,39 @@
                     </div>
 
                     
+                    <!-- Order 2: In Transit -->
                     <div class="card order-card mb-3 shadow-sm border-0">
                         <div class="card-body">
                             <div class="row align-items-center">
                                 
                                 <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-number">
-                                        <h5 class="mb-1 fw-bold text-primary">[NUMERO_ORDEN_2]</h5>
-                                        <small class="text-muted">[FECHA_PEDIDO_2]</small>
+                                        <h5 class="mb-1 fw-bold text-primary">#ORD-2025-0178</h5>
+                                        <small class="text-muted">22 Ene 2025</small>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill">
-                                        <i class="bi bi-truck me-1"></i>[ESTADO_EN_CAMINO]
+                                        <i class="bi bi-truck me-1"></i>En Camino
                                     </span>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-4 col-lg-4 mb-3 mb-md-0">
                                     <div class="order-details">
-                                        <p class="mb-1 fw-semibold">[PRODUCTOS_PEDIDO_2]</p>
+                                        <p class="mb-1 fw-semibold">Imperial Stout x2, Pale Ale x3</p>
                                         <small class="text-muted">
-                                            <i class="bi bi-box me-1"></i>[CANTIDAD_ITEMS_2] [ITEMS] • 
-                                            <i class="bi bi-truck me-1"></i>[METODO_ENVIO_2]
+                                            <i class="bi bi-box me-1"></i>5 items • 
+                                            <i class="bi bi-truck me-1"></i>Envío express
                                         </small>
                                         
                                         <div class="progress mt-2" style="height: 4px;">
                                             <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
                                         </div>
                                         <small class="text-warning mt-1 d-block">
-                                            <i class="bi bi-clock me-1"></i>[ESTIMACION_ENTREGA_2]
+                                            <i class="bi bi-clock me-1"></i>Llegada estimada: 24 Ene 2025
                                         </small>
                                     </div>
                                 </div>
@@ -260,9 +272,9 @@
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-total text-center text-md-start">
-                                        <h5 class="mb-1 fw-bold">[TOTAL_PEDIDO_2]</h5>
+                                        <h5 class="mb-1 fw-bold">$26.000</h5>
                                         <small class="text-success">
-                                            <i class="bi bi-check-lg me-1"></i>[PAGADO]
+                                            <i class="bi bi-check-lg me-1"></i>Pagado
                                         </small>
                                     </div>
                                 </div>
@@ -271,10 +283,10 @@
                                 <div class="col-12 col-md-1 col-lg-2 text-center text-md-end">
                                     <div class="d-flex flex-column gap-2">
                                         <button class="btn btn-primary btn-sm" type="button">
-                                            <i class="bi bi-eye me-1"></i>[VER_DETALLES]
+                                            <i class="bi bi-eye me-1"></i>Ver Detalles
                                         </button>
                                         <button class="btn btn-outline-warning btn-sm" type="button">
-                                            <i class="bi bi-geo-alt me-1"></i>[RASTREAR]
+                                            <i class="bi bi-geo-alt me-1"></i>Rastrear
                                         </button>
                                     </div>
                                 </div>
@@ -283,38 +295,39 @@
                     </div>
 
                     
+                    <!-- Order 3: Processing -->
                     <div class="card order-card mb-3 shadow-sm border-0">
                         <div class="card-body">
                             <div class="row align-items-center">
                                 
                                 <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-number">
-                                        <h5 class="mb-1 fw-bold text-primary">[NUMERO_ORDEN_3]</h5>
-                                        <small class="text-muted">[FECHA_PEDIDO_3]</small>
+                                        <h5 class="mb-1 fw-bold text-primary">#ORD-2025-0189</h5>
+                                        <small class="text-muted">25 Ene 2025</small>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <span class="badge bg-info text-dark fs-6 px-3 py-2 rounded-pill">
-                                        <i class="bi bi-clock-history me-1"></i>[ESTADO_PROCESANDO]
+                                        <i class="bi bi-clock-history me-1"></i>Procesando
                                     </span>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-4 col-lg-4 mb-3 mb-md-0">
                                     <div class="order-details">
-                                        <p class="mb-1 fw-semibold">[PRODUCTOS_PEDIDO_3]</p>
+                                        <p class="mb-1 fw-semibold">Belgian Tripel x1, Wheat Beer x2</p>
                                         <small class="text-muted">
-                                            <i class="bi bi-box me-1"></i>[CANTIDAD_ITEMS_3] [ITEMS] • 
-                                            <i class="bi bi-truck me-1"></i>[METODO_ENVIO_3]
+                                            <i class="bi bi-box me-1"></i>3 items • 
+                                            <i class="bi bi-truck me-1"></i>Envío estándar
                                         </small>
                                         
                                         <div class="d-flex align-items-center mt-2">
                                             <div class="spinner-border spinner-border-sm text-info me-2" role="status">
-                                                <span class="visually-hidden">[CARGANDO]</span>
+                                                <span class="visually-hidden">Cargando...</span>
                                             </div>
-                                            <small class="text-info">[PREPARANDO_PEDIDO]</small>
+                                            <small class="text-info">Preparando tu pedido</small>
                                         </div>
                                     </div>
                                 </div>
@@ -322,9 +335,9 @@
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-total text-center text-md-start">
-                                        <h5 class="mb-1 fw-bold">[TOTAL_PEDIDO_3]</h5>
+                                        <h5 class="mb-1 fw-bold">$18.500</h5>
                                         <small class="text-success">
-                                            <i class="bi bi-check-lg me-1"></i>[PAGADO]
+                                            <i class="bi bi-check-lg me-1"></i>Pagado
                                         </small>
                                     </div>
                                 </div>
@@ -333,15 +346,15 @@
                                 <div class="col-12 col-md-1 col-lg-2 text-center text-md-end">
                                     <div class="d-flex flex-column gap-2">
                                         <button class="btn btn-primary btn-sm" type="button">
-                                            <i class="bi bi-eye me-1"></i>[VER_DETALLES]
+                                            <i class="bi bi-eye me-1"></i>Ver Detalles
                                         </button>
                                         <div class="dropdown">
                                             <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i>[CANCELAR_PEDIDO]</a></li>
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots me-2"></i>[CONTACTAR_SOPORTE]</a></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-x-circle me-2"></i>Cancelar Pedido</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots me-2"></i>Contactar Soporte</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -351,31 +364,32 @@
                     </div>
 
                     
-                    <div class="card order-card mb-3 shadow-sm border-0 order-cancelled">
+                    <!-- Order 4: Cancelled -->
+                    <div class="card order-card mb-3 shadow-sm border-0 order-cancelled" style="opacity: 0.7;">
                         <div class="card-body">
                             <div class="row align-items-center">
                                 
                                 <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-number">
-                                        <h5 class="mb-1 fw-bold text-muted">[NUMERO_ORDEN_4]</h5>
-                                        <small class="text-muted">[FECHA_PEDIDO_4]</small>
+                                        <h5 class="mb-1 fw-bold text-muted">#ORD-2025-0145</h5>
+                                        <small class="text-muted">10 Ene 2025</small>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <span class="badge bg-danger fs-6 px-3 py-2 rounded-pill">
-                                        <i class="bi bi-x-circle me-1"></i>[ESTADO_CANCELADO]
+                                        <i class="bi bi-x-circle me-1"></i>Cancelado
                                     </span>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-4 col-lg-4 mb-3 mb-md-0">
                                     <div class="order-details">
-                                        <p class="mb-1 fw-semibold text-muted">[PRODUCTOS_PEDIDO_4]</p>
+                                        <p class="mb-1 fw-semibold text-muted">Amber Ale x4</p>
                                         <small class="text-muted">
-                                            <i class="bi bi-box me-1"></i>[CANTIDAD_ITEMS_4] [ITEMS] • 
-                                            [RAZON_CANCELACION]
+                                            <i class="bi bi-box me-1"></i>4 items • 
+                                            Cancelado por el cliente
                                         </small>
                                     </div>
                                 </div>
@@ -383,9 +397,9 @@
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-total text-center text-md-start">
-                                        <h5 class="mb-1 fw-bold text-muted">[TOTAL_PEDIDO_4]</h5>
+                                        <h5 class="mb-1 fw-bold text-muted">$19.200</h5>
                                         <small class="text-info">
-                                            <i class="bi bi-arrow-clockwise me-1"></i>[REEMBOLSADO]
+                                            <i class="bi bi-arrow-clockwise me-1"></i>Reembolsado
                                         </small>
                                     </div>
                                 </div>
@@ -394,10 +408,10 @@
                                 <div class="col-12 col-md-1 col-lg-2 text-center text-md-end">
                                     <div class="d-flex flex-column gap-2">
                                         <button class="btn btn-outline-secondary btn-sm" type="button">
-                                            <i class="bi bi-eye me-1"></i>[VER_DETALLES]
+                                            <i class="bi bi-eye me-1"></i>Ver Detalles
                                         </button>
                                         <button class="btn btn-outline-primary btn-sm" type="button">
-                                            <i class="bi bi-arrow-repeat me-1"></i>[VOLVER_A_PEDIR]
+                                            <i class="bi bi-arrow-repeat me-1"></i>Volver a Pedir
                                         </button>
                                     </div>
                                 </div>
@@ -406,31 +420,32 @@
                     </div>
 
                     
+                    <!-- Order 5: Delivered -->
                     <div class="card order-card mb-3 shadow-sm border-0">
                         <div class="card-body">
                             <div class="row align-items-center">
                                 
                                 <div class="col-12 col-md-3 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-number">
-                                        <h5 class="mb-1 fw-bold text-primary">[NUMERO_ORDEN_5]</h5>
-                                        <small class="text-muted">[FECHA_PEDIDO_5]</small>
+                                        <h5 class="mb-1 fw-bold text-primary">#ORD-2024-0987</h5>
+                                        <small class="text-muted">28 Dic 2024</small>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <span class="badge bg-success fs-6 px-3 py-2 rounded-pill">
-                                        <i class="bi bi-check-circle me-1"></i>[ESTADO_ENTREGADO]
+                                        <i class="bi bi-check-circle me-1"></i>Entregado
                                     </span>
                                 </div>
                                 
                                 
                                 <div class="col-12 col-md-4 col-lg-4 mb-3 mb-md-0">
                                     <div class="order-details">
-                                        <p class="mb-1 fw-semibold">[PRODUCTOS_PEDIDO_5]</p>
+                                        <p class="mb-1 fw-semibold">Porter x2, Saison x1, Pilsner x3</p>
                                         <small class="text-muted">
-                                            <i class="bi bi-box me-1"></i>[CANTIDAD_ITEMS_5] [ITEMS] • 
-                                            <i class="bi bi-truck me-1"></i>[METODO_ENVIO_5]
+                                            <i class="bi bi-box me-1"></i>6 items • 
+                                            <i class="bi bi-truck me-1"></i>Envío estándar
                                         </small>
                                     </div>
                                 </div>
@@ -438,9 +453,9 @@
                                 
                                 <div class="col-12 col-md-2 col-lg-2 mb-3 mb-md-0">
                                     <div class="order-total text-center text-md-start">
-                                        <h5 class="mb-1 fw-bold">[TOTAL_PEDIDO_5]</h5>
+                                        <h5 class="mb-1 fw-bold">$28.900</h5>
                                         <small class="text-success">
-                                            <i class="bi bi-check-lg me-1"></i>[PAGADO]
+                                            <i class="bi bi-check-lg me-1"></i>Pagado
                                         </small>
                                     </div>
                                 </div>
@@ -449,16 +464,16 @@
                                 <div class="col-12 col-md-1 col-lg-2 text-center text-md-end">
                                     <div class="d-flex flex-column gap-2">
                                         <button class="btn btn-primary btn-sm" type="button">
-                                            <i class="bi bi-eye me-1"></i>[VER_DETALLES]
+                                            <i class="bi bi-eye me-1"></i>Ver Detalles
                                         </button>
                                         <div class="dropdown">
                                             <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
                                                 <i class="bi bi-three-dots"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>[CALIFICAR]</a></li>
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat me-2"></i>[VOLVER_A_PEDIR]</a></li>
-                                                <li><a class="dropdown-item" href="#"><i class="bi bi-receipt me-2"></i>[FACTURA]</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>Calificar</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat me-2"></i>Volver a Pedir</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-receipt me-2"></i>Factura</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -469,7 +484,7 @@
 
                     
                     <div class="d-flex justify-content-center mt-4">
-                        <nav aria-label="[NAVEGACION_PEDIDOS]">
+                        <nav aria-label="Navegación de pedidos">
                             <ul class="pagination">
                                 <li class="page-item disabled">
                                     <span class="page-link">
@@ -501,15 +516,15 @@
                                 <i class="bi bi-info-circle-fill fs-4"></i>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h4 class="alert-heading mb-1">[TITULO_INFO_ADICIONAL]</h4>
-                                <p class="mb-0">[DESCRIPCION_INFO_PEDIDOS]</p>
+                                <h4 class="alert-heading mb-1">¿Necesitas ayuda con tu pedido?</h4>
+                                <p class="mb-0">Estamos aquí para ayudarte. Puedes rastrear tus pedidos en tiempo real, descargar facturas o contactar a nuestro equipo de soporte.</p>
                                 <hr>
                                 <div class="d-flex flex-wrap gap-2 mb-0">
                                     <a href="#" class="btn btn-outline-info btn-sm">
-                                        <i class="bi bi-question-circle me-1"></i>[PREGUNTAS_FRECUENTES]
+                                        <i class="bi bi-question-circle me-1"></i>Preguntas Frecuentes
                                     </a>
                                     <a href="#" class="btn btn-outline-info btn-sm">
-                                        <i class="bi bi-chat-dots me-1"></i>[CONTACTAR_SOPORTE]
+                                        <i class="bi bi-chat-dots me-1"></i>Contactar Soporte
                                     </a>
                                 </div>
                             </div>
@@ -523,18 +538,33 @@
     </main>
 
     
+    <!-- Updated footer to match other pages -->
     <footer class="bg-dark text-light py-4 mt-auto">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 Craft & Beer. [TODOS_DERECHOS_RESERVADOS]</p>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold"><i class="bi bi-cup-hot me-2"></i>Craft & Beer</h5>
+                    <p class="small">Cervezas artesanales premium desde 2020</p>
                 </div>
-                <div class="col-12 col-md-6 text-center text-md-end">
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-                    </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h6 class="fw-bold">Enlaces</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="../us01/catalogo.html" class="text-light text-decoration-none">Catálogo</a></li>
+                        <li><a href="../us02/busqueda.html" class="text-light text-decoration-none">Buscar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Contacto</h6>
+                    <p class="small mb-1"><i class="bi bi-envelope"></i> info@craftbeer.cl</p>
+                    <p class="small mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+                    <p class="small"><i class="bi bi-geo-alt"></i> Santiago, Chile</p>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 small">&copy; 2025 Craft & Beer. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -544,42 +574,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     
+    <!-- Added functional JavaScript for order interactions -->
     <script>
-
-        console.log('[JAVASCRIPT_FILTROS_PLACEHOLDER]');
-        
-
-        document.querySelectorAll('.page-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-
-            });
-        });
-        
-
+        // Handle view details buttons
         document.querySelectorAll('.btn').forEach(button => {
-            if (button.textContent.includes('[VER_DETALLES]') || 
-                button.textContent.includes('[RASTREAR]') || 
-                button.textContent.includes('[VOLVER_A_PEDIR]')) {
+            if (button.textContent.includes('Ver Detalles')) {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
-
+                    const orderNumber = this.closest('.order-card').querySelector('.order-number h5').textContent;
+                    alert(`Mostrando detalles del pedido ${orderNumber}`);
+                });
+            }
+            
+            if (button.textContent.includes('Rastrear')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const orderNumber = this.closest('.order-card').querySelector('.order-number h5').textContent;
+                    alert(`Rastreando pedido ${orderNumber}...`);
+                });
+            }
+            
+            if (button.textContent.includes('Volver a Pedir')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Productos agregados al carrito');
                 });
             }
         });
         
-
+        // Handle dropdown actions
         document.querySelectorAll('.dropdown-item').forEach(item => {
             item.addEventListener('click', function(e) {
                 e.preventDefault();
-
+                const action = this.textContent.trim();
+                alert(`Acción: ${action}`);
             });
         });
-        
-
-        setInterval(function() {
-
-        }, 30000); // Cada 30 segundos
     </script>
 </body>
 </html>

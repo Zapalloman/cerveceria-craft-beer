@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     
@@ -22,11 +22,12 @@
 <body class="d-flex flex-column min-vh-100">
     
     
+    <!-- Updated navigation to match other pages -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
             <div class="container">
                 
-                <a class="navbar-brand fw-bold fs-3" href="#">
+                <a class="navbar-brand fw-bold" href="../index.html">
                     <i class="bi bi-cup-hot me-2"></i>Craft & Beer
                 </a>
                 
@@ -39,16 +40,21 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="../us01/catalogo.html">[CATÁLOGO]</a>
+                            <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../us02/busqueda.html">[BÚSQUEDA]</a>
+                            <a class="nav-link" href="../us01/catalogo.html">Catálogo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">[INICIAR SESIÓN]</a>
+                            <a class="nav-link" href="../us02/busqueda.html">Buscar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#" aria-current="page">[REGISTRO]</a>
+                            <a class="nav-link" href="../us04/carrito.html">
+                                <i class="bi bi-cart3"></i> Carrito
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="registro.html" aria-current="page">Registrarse</a>
                         </li>
                     </ul>
                 </div>
@@ -57,6 +63,7 @@
     </header>
 
     
+    <!-- Replaced all placeholders with real content -->
     <main class="flex-grow-1 d-flex align-items-center py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -68,7 +75,7 @@
                             <h1 class="h3 mb-0 fw-bold">
                                 <i class="bi bi-person-plus me-2"></i>Crear Cuenta
                             </h1>
-                            <p class="mb-0 mt-2 opacity-75">[SUBTÍTULO_BIENVENIDA]</p>
+                            <p class="mb-0 mt-2 opacity-75">Únete a nuestra comunidad cervecera</p>
                         </div>
                         
                         <div class="card-body p-4">
@@ -86,13 +93,13 @@
                                         <input type="email" 
                                                class="form-control form-control-lg" 
                                                id="email" 
-                                               placeholder="[EMAIL_PLACEHOLDER]" 
+                                               placeholder="tu@email.cl" 
                                                required>
                                         <div class="valid-feedback">
                                             <i class="bi bi-check-circle-fill"></i>
                                         </div>
                                         <div class="invalid-feedback">
-                                            <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_EMAIL]
+                                            <i class="bi bi-x-circle-fill"></i> Por favor ingresa un email válido
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +114,7 @@
                                         <input type="password" 
                                                class="form-control form-control-lg" 
                                                id="password" 
-                                               placeholder="[PASSWORD_PLACEHOLDER]" 
+                                               placeholder="Mínimo 8 caracteres" 
                                                required>
                                         <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                                             <i class="bi bi-eye"></i>
@@ -116,29 +123,29 @@
                                             <i class="bi bi-check-circle-fill"></i>
                                         </div>
                                         <div class="invalid-feedback">
-                                            <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_PASSWORD]
+                                            <i class="bi bi-x-circle-fill"></i> La contraseña no cumple los requisitos
                                         </div>
                                     </div>
                                     
                                     
                                     <div class="password-requirements mt-2">
-                                        <small class="text-muted d-block mb-1">[TEXTO_REQUISITOS]:</small>
+                                        <small class="text-muted d-block mb-1">La contraseña debe contener:</small>
                                         <div class="requirement-list">
                                             <div class="requirement-item d-flex align-items-center mb-1">
                                                 <i class="bi bi-x-circle text-danger me-2 requirement-icon"></i>
-                                                <span class="requirement-text">[REQUISITO_MINIMO_8_CARACTERES]</span>
+                                                <span class="requirement-text small">Mínimo 8 caracteres</span>
                                             </div>
                                             <div class="requirement-item d-flex align-items-center mb-1">
                                                 <i class="bi bi-x-circle text-danger me-2 requirement-icon"></i>
-                                                <span class="requirement-text">[REQUISITO_MAYUSCULA]</span>
+                                                <span class="requirement-text small">Una letra mayúscula</span>
                                             </div>
                                             <div class="requirement-item d-flex align-items-center mb-1">
                                                 <i class="bi bi-x-circle text-danger me-2 requirement-icon"></i>
-                                                <span class="requirement-text">[REQUISITO_NUMERO]</span>
+                                                <span class="requirement-text small">Un número</span>
                                             </div>
                                             <div class="requirement-item d-flex align-items-center">
                                                 <i class="bi bi-x-circle text-danger me-2 requirement-icon"></i>
-                                                <span class="requirement-text">[REQUISITO_CARACTER_ESPECIAL]</span>
+                                                <span class="requirement-text small">Un carácter especial (@$!%*?&)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -154,16 +161,16 @@
                                         <input type="password" 
                                                class="form-control form-control-lg" 
                                                id="confirmPassword" 
-                                               placeholder="[CONFIRM_PASSWORD_PLACEHOLDER]" 
+                                               placeholder="Repite tu contraseña" 
                                                required>
                                         <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
                                             <i class="bi bi-eye"></i>
                                         </button>
                                         <div class="valid-feedback">
-                                            <i class="bi bi-check-circle-fill"></i> [MENSAJE_PASSWORDS_COINCIDEN]
+                                            <i class="bi bi-check-circle-fill"></i> Las contraseñas coinciden
                                         </div>
                                         <div class="invalid-feedback">
-                                            <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_CONFIRM_PASSWORD]
+                                            <i class="bi bi-x-circle-fill"></i> Las contraseñas no coinciden
                                         </div>
                                     </div>
                                 </div>
@@ -177,12 +184,12 @@
                                                required>
                                         <label class="form-check-label" for="terms">
                                             Acepto los 
-                                            <a href="#" class="text-primary text-decoration-none fw-semibold">[TÉRMINOS_Y_CONDICIONES]</a> 
+                                            <a href="#" class="text-primary text-decoration-none fw-semibold">Términos y Condiciones</a> 
                                             y la 
-                                            <a href="#" class="text-primary text-decoration-none fw-semibold">[POLÍTICA_PRIVACIDAD]</a>
+                                            <a href="#" class="text-primary text-decoration-none fw-semibold">Política de Privacidad</a>
                                         </label>
                                         <div class="invalid-feedback">
-                                            [MENSAJE_ERROR_TERMS]
+                                            Debes aceptar los términos y condiciones
                                         </div>
                                     </div>
                                 </div>
@@ -191,16 +198,16 @@
                                 <div class="d-grid mb-4">
                                     <button type="submit" 
                                             class="btn btn-primary btn-lg fw-semibold">
-                                        <i class="bi bi-person-plus me-2"></i>[BOTÓN_REGISTRARSE]
+                                        <i class="bi bi-person-plus me-2"></i>Crear Cuenta
                                     </button>
                                 </div>
 
                                 
                                 <div class="text-center">
                                     <p class="mb-0 text-muted">
-                                        [TEXTO_YA_TIENES_CUENTA] 
+                                        ¿Ya tienes una cuenta? 
                                         <a href="#" class="text-primary text-decoration-none fw-semibold">
-                                            [LINK_INICIAR_SESIÓN]
+                                            Iniciar Sesión
                                         </a>
                                     </p>
                                 </div>
@@ -215,19 +222,19 @@
                             <div class="col-12 col-md-4 mb-3 mb-md-0">
                                 <div class="feature-item">
                                     <i class="bi bi-shield-check text-success fs-2 mb-2"></i>
-                                    <p class="small text-muted mb-0">[FEATURE_SEGURIDAD]</p>
+                                    <p class="small text-muted mb-0">Registro 100% seguro</p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4 mb-3 mb-md-0">
                                 <div class="feature-item">
                                     <i class="bi bi-lightning text-warning fs-2 mb-2"></i>
-                                    <p class="small text-muted mb-0">[FEATURE_RAPIDEZ]</p>
+                                    <p class="small text-muted mb-0">Proceso rápido y fácil</p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <div class="feature-item">
                                     <i class="bi bi-heart text-danger fs-2 mb-2"></i>
-                                    <p class="small text-muted mb-0">[FEATURE_EXPERIENCIA]</p>
+                                    <p class="small text-muted mb-0">Beneficios exclusivos</p>
                                 </div>
                             </div>
                         </div>
@@ -239,18 +246,33 @@
     </main>
 
     
+    <!-- Updated footer to match other pages -->
     <footer class="bg-dark text-light py-4 mt-auto">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 Craft & Beer. [TODOS_DERECHOS_RESERVADOS]</p>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold"><i class="bi bi-cup-hot me-2"></i>Craft & Beer</h5>
+                    <p class="small">Cervezas artesanales premium desde 2020</p>
                 </div>
-                <div class="col-12 col-md-6 text-center text-md-end">
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-                    </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h6 class="fw-bold">Enlaces</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="../us01/catalogo.html" class="text-light text-decoration-none">Catálogo</a></li>
+                        <li><a href="../us02/busqueda.html" class="text-light text-decoration-none">Buscar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Contacto</h6>
+                    <p class="small mb-1"><i class="bi bi-envelope"></i> info@craftbeer.cl</p>
+                    <p class="small mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+                    <p class="small"><i class="bi bi-geo-alt"></i> Santiago, Chile</p>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 small">&copy; 2025 Craft & Beer. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -260,28 +282,114 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     
+    <!-- Added functional password validation JavaScript -->
     <script>
-
-        console.log('[JAVASCRIPT_VALIDACION_PLACEHOLDER]');
-        
-
+        // Toggle password visibility
         document.getElementById('togglePassword').addEventListener('click', function() {
-
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
         });
         
         document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
-
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            const icon = this.querySelector('i');
+            
+            if (confirmPasswordInput.type === 'password') {
+                confirmPasswordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                confirmPasswordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
         });
         
-
+        // Password requirements validation
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const requirements = document.querySelectorAll('.requirement-item');
+            
+            // Check minimum 8 characters
+            if (password.length >= 8) {
+                requirements[0].querySelector('.requirement-icon').classList.remove('bi-x-circle', 'text-danger');
+                requirements[0].querySelector('.requirement-icon').classList.add('bi-check-circle', 'text-success');
+            } else {
+                requirements[0].querySelector('.requirement-icon').classList.remove('bi-check-circle', 'text-success');
+                requirements[0].querySelector('.requirement-icon').classList.add('bi-x-circle', 'text-danger');
+            }
+            
+            // Check uppercase letter
+            if (/[A-Z]/.test(password)) {
+                requirements[1].querySelector('.requirement-icon').classList.remove('bi-x-circle', 'text-danger');
+                requirements[1].querySelector('.requirement-icon').classList.add('bi-check-circle', 'text-success');
+            } else {
+                requirements[1].querySelector('.requirement-icon').classList.remove('bi-check-circle', 'text-success');
+                requirements[1].querySelector('.requirement-icon').classList.add('bi-x-circle', 'text-danger');
+            }
+            
+            // Check number
+            if (/[0-9]/.test(password)) {
+                requirements[2].querySelector('.requirement-icon').classList.remove('bi-x-circle', 'text-danger');
+                requirements[2].querySelector('.requirement-icon').classList.add('bi-check-circle', 'text-success');
+            } else {
+                requirements[2].querySelector('.requirement-icon').classList.remove('bi-check-circle', 'text-success');
+                requirements[2].querySelector('.requirement-icon').classList.add('bi-x-circle', 'text-danger');
+            }
+            
+            // Check special character
+            if (/[@$!%*?&]/.test(password)) {
+                requirements[3].querySelector('.requirement-icon').classList.remove('bi-x-circle', 'text-danger');
+                requirements[3].querySelector('.requirement-icon').classList.add('bi-check-circle', 'text-success');
+            } else {
+                requirements[3].querySelector('.requirement-icon').classList.remove('bi-check-circle', 'text-success');
+                requirements[3].querySelector('.requirement-icon').classList.add('bi-x-circle', 'text-danger');
+            }
+        });
+        
+        // Form submission
         document.getElementById('registroForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
-        });
-        
-
-        document.getElementById('password').addEventListener('input', function() {
-
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Validate password match
+            if (password !== confirmPassword) {
+                document.getElementById('confirmPassword').classList.add('is-invalid');
+                return;
+            }
+            
+            // Validate password requirements
+            const isValid = password.length >= 8 && 
+                          /[A-Z]/.test(password) && 
+                          /[0-9]/.test(password) && 
+                          /[@$!%*?&]/.test(password);
+            
+            if (!isValid) {
+                document.getElementById('password').classList.add('is-invalid');
+                return;
+            }
+            
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+                this.classList.add('was-validated');
+                return;
+            }
+            
+            // Success - would normally submit to server
+            alert('¡Cuenta creada exitosamente! Bienvenido a Craft & Beer.');
+            this.classList.add('was-validated');
         });
     </script>
 </body>

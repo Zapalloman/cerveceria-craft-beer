@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     
@@ -22,11 +22,12 @@
 <body class="d-flex flex-column min-vh-100">
     
     
+    <!-- Updated navigation to match other pages -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
             <div class="container">
                 
-                <a class="navbar-brand fw-bold fs-3" href="#">
+                <a class="navbar-brand fw-bold" href="../index.html">
                     <i class="bi bi-cup-hot me-2"></i>Craft & Beer
                 </a>
                 
@@ -39,20 +40,28 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="../us01/catalogo.html">[CATÁLOGO]</a>
+                            <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../us02/busqueda.html">[BÚSQUEDA]</a>
+                            <a class="nav-link" href="../us01/catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../us02/busqueda.html">Buscar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../us04/carrito.html">
+                                <i class="bi bi-cart3"></i> Carrito
+                            </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle me-1"></i>[USUARIO]
+                                <i class="bi bi-person-circle me-1"></i>Juan Pérez
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="#"><i class="bi bi-person me-2"></i>[MI_PERFIL]</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-cart me-2"></i>[MIS_PEDIDOS]</a></li>
+                                <li><a class="dropdown-item active" href="perfil.html"><i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+                                <li><a class="dropdown-item" href="../us10/pedidos.html"><i class="bi bi-cart me-2"></i>Mis Pedidos</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>[CERRAR_SESIÓN]</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -62,6 +71,7 @@
     </header>
 
     
+    <!-- Replaced all placeholders with real user data -->
     <main class="flex-grow-1 py-4">
         <div class="container">
             
@@ -69,12 +79,12 @@
             <nav aria-label="breadcrumb" class="mb-4">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-decoration-none">
-                            <i class="bi bi-house me-1"></i>[INICIO]
+                        <a href="../index.html" class="text-decoration-none">
+                            <i class="bi bi-house me-1"></i>Inicio
                         </a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <i class="bi bi-person me-1"></i>[MI_PERFIL]
+                        <i class="bi bi-person me-1"></i>Mi Perfil
                     </li>
                 </ol>
             </nav>
@@ -83,18 +93,21 @@
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="d-flex align-items-center mb-3">
-                        <div class="avatar-container me-3">
-                            <img src="https://via.placeholder.com/80x80/0d6efd/ffffff?text=U" 
-                                 alt="[AVATAR_USUARIO]" 
-                                 class="avatar-img rounded-circle">
-                            <button class="btn btn-sm btn-outline-primary avatar-edit-btn" type="button">
+                        <div class="avatar-container me-3 position-relative">
+                            <img src="/placeholder.svg?height=80&width=80" 
+                                 alt="Avatar de Juan Pérez" 
+                                 class="rounded-circle border border-3 border-primary">
+                            <button class="btn btn-sm btn-primary position-absolute bottom-0 end-0 rounded-circle" type="button" style="width: 32px; height: 32px; padding: 0;">
                                 <i class="bi bi-camera"></i>
                             </button>
                         </div>
                         <div>
-                            <h1 class="h2 mb-1 fw-bold">[NOMBRE_USUARIO]</h1>
+                            <h1 class="h2 mb-1 fw-bold">Juan Pérez González</h1>
                             <p class="text-muted mb-0">
-                                <i class="bi bi-envelope me-1"></i>[EMAIL_USUARIO]
+                                <i class="bi bi-envelope me-1"></i>juan.perez@email.cl
+                            </p>
+                            <p class="text-muted mb-0 small">
+                                <i class="bi bi-calendar-check me-1"></i>Miembro desde Enero 2024
                             </p>
                         </div>
                     </div>
@@ -117,7 +130,7 @@
                                             role="tab" 
                                             aria-controls="profile-pane" 
                                             aria-selected="true">
-                                        <i class="bi bi-person me-2"></i>[TAB_PERFIL]
+                                        <i class="bi bi-person me-2"></i>Información Personal
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
@@ -129,7 +142,7 @@
                                             role="tab" 
                                             aria-controls="addresses-pane" 
                                             aria-selected="false">
-                                        <i class="bi bi-geo-alt me-2"></i>[TAB_DIRECCIONES]
+                                        <i class="bi bi-geo-alt me-2"></i>Mis Direcciones
                                     </button>
                                 </li>
                             </ul>
@@ -149,7 +162,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <h3 class="h4 mb-4 fw-bold">
-                                                <i class="bi bi-person-gear me-2 text-primary"></i>[TITULO_INFORMACION_PERSONAL]
+                                                <i class="bi bi-person-gear me-2 text-primary"></i>Información Personal
                                             </h3>
                                         </div>
                                     </div>
@@ -161,7 +174,7 @@
                                             
                                             <div class="col-12 col-md-6 mb-4">
                                                 <label for="fullName" class="form-label fw-semibold">
-                                                    <i class="bi bi-person me-1"></i>[LABEL_NOMBRE_COMPLETO]
+                                                    <i class="bi bi-person me-1"></i>Nombre Completo
                                                 </label>
                                                 <div class="input-group">
                                                     <span class="input-group-text">
@@ -170,14 +183,14 @@
                                                     <input type="text" 
                                                            class="form-control" 
                                                            id="fullName" 
-                                                           value="[VALOR_NOMBRE_ACTUAL]" 
-                                                           placeholder="[PLACEHOLDER_NOMBRE]" 
+                                                           value="Juan Pérez González" 
+                                                           placeholder="Ingresa tu nombre completo" 
                                                            required>
                                                     <div class="valid-feedback">
-                                                        <i class="bi bi-check-circle-fill"></i> [MENSAJE_NOMBRE_VALIDO]
+                                                        <i class="bi bi-check-circle-fill"></i> Nombre válido
                                                     </div>
                                                     <div class="invalid-feedback">
-                                                        <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_NOMBRE]
+                                                        <i class="bi bi-x-circle-fill"></i> El nombre es obligatorio
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,7 +198,7 @@
                                             
                                             <div class="col-12 col-md-6 mb-4">
                                                 <label for="email" class="form-label fw-semibold">
-                                                    <i class="bi bi-envelope me-1"></i>[LABEL_EMAIL]
+                                                    <i class="bi bi-envelope me-1"></i>Correo Electrónico
                                                 </label>
                                                 <div class="input-group">
                                                     <span class="input-group-text">
@@ -194,14 +207,14 @@
                                                     <input type="email" 
                                                            class="form-control" 
                                                            id="email" 
-                                                           value="[VALOR_EMAIL_ACTUAL]" 
-                                                           placeholder="[PLACEHOLDER_EMAIL]" 
+                                                           value="juan.perez@email.cl" 
+                                                           placeholder="tu@email.cl" 
                                                            required>
                                                     <div class="valid-feedback">
-                                                        <i class="bi bi-check-circle-fill"></i> [MENSAJE_EMAIL_VALIDO]
+                                                        <i class="bi bi-check-circle-fill"></i> Email válido
                                                     </div>
                                                     <div class="invalid-feedback">
-                                                        <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_EMAIL]
+                                                        <i class="bi bi-x-circle-fill"></i> Ingresa un email válido
                                                     </div>
                                                 </div>
                                             </div>
@@ -209,7 +222,7 @@
                                             
                                             <div class="col-12 col-md-6 mb-4">
                                                 <label for="phone" class="form-label fw-semibold">
-                                                    <i class="bi bi-telephone me-1"></i>[LABEL_TELEFONO]
+                                                    <i class="bi bi-telephone me-1"></i>Teléfono
                                                 </label>
                                                 <div class="input-group">
                                                     <span class="input-group-text">
@@ -218,14 +231,14 @@
                                                     <input type="tel" 
                                                            class="form-control" 
                                                            id="phone" 
-                                                           value="[VALOR_TELEFONO_ACTUAL]" 
-                                                           placeholder="[PLACEHOLDER_TELEFONO]" 
+                                                           value="+56 9 8765 4321" 
+                                                           placeholder="+56 9 1234 5678" 
                                                            required>
                                                     <div class="valid-feedback">
-                                                        <i class="bi bi-check-circle-fill"></i> [MENSAJE_TELEFONO_VALIDO]
+                                                        <i class="bi bi-check-circle-fill"></i> Teléfono válido
                                                     </div>
                                                     <div class="invalid-feedback">
-                                                        <i class="bi bi-x-circle-fill"></i> [MENSAJE_ERROR_TELEFONO]
+                                                        <i class="bi bi-x-circle-fill"></i> El teléfono es obligatorio
                                                     </div>
                                                 </div>
                                             </div>
@@ -233,7 +246,7 @@
                                             
                                             <div class="col-12 col-md-6 mb-4">
                                                 <label for="birthDate" class="form-label fw-semibold">
-                                                    <i class="bi bi-calendar me-1"></i>[LABEL_FECHA_NACIMIENTO]
+                                                    <i class="bi bi-calendar me-1"></i>Fecha de Nacimiento
                                                 </label>
                                                 <div class="input-group">
                                                     <span class="input-group-text">
@@ -242,7 +255,7 @@
                                                     <input type="date" 
                                                            class="form-control" 
                                                            id="birthDate" 
-                                                           value="[VALOR_FECHA_ACTUAL]">
+                                                           value="1990-05-15">
                                                 </div>
                                             </div>
 
@@ -253,10 +266,10 @@
                                             <div class="col-12">
                                                 <div class="d-flex flex-wrap gap-2">
                                                     <button type="submit" class="btn btn-primary btn-lg">
-                                                        <i class="bi bi-check-lg me-2"></i>[BOTON_GUARDAR_CAMBIOS]
+                                                        <i class="bi bi-check-lg me-2"></i>Guardar Cambios
                                                     </button>
                                                     <button type="reset" class="btn btn-outline-secondary btn-lg">
-                                                        <i class="bi bi-arrow-clockwise me-2"></i>[BOTON_RESTABLECER]
+                                                        <i class="bi bi-arrow-clockwise me-2"></i>Restablecer
                                                     </button>
                                                 </div>
                                             </div>
@@ -268,17 +281,17 @@
                                         <div class="col-12">
                                             <hr class="my-4">
                                             <h4 class="h5 mb-3 fw-bold">
-                                                <i class="bi bi-gear me-2 text-primary"></i>[TITULO_CONFIGURACION_CUENTA]
+                                                <i class="bi bi-gear me-2 text-primary"></i>Configuración de Cuenta
                                             </h4>
                                             <div class="d-flex flex-wrap gap-2">
                                                 <button class="btn btn-outline-warning" type="button">
-                                                    <i class="bi bi-key me-2"></i>[BOTON_CAMBIAR_PASSWORD]
+                                                    <i class="bi bi-key me-2"></i>Cambiar Contraseña
                                                 </button>
                                                 <button class="btn btn-outline-info" type="button">
-                                                    <i class="bi bi-bell me-2"></i>[BOTON_NOTIFICACIONES]
+                                                    <i class="bi bi-bell me-2"></i>Notificaciones
                                                 </button>
                                                 <button class="btn btn-outline-danger" type="button">
-                                                    <i class="bi bi-trash me-2"></i>[BOTON_ELIMINAR_CUENTA]
+                                                    <i class="bi bi-trash me-2"></i>Eliminar Cuenta
                                                 </button>
                                             </div>
                                         </div>
@@ -296,14 +309,14 @@
                                         <div class="col-12">
                                             <div class="d-flex justify-content-between align-items-center mb-4">
                                                 <h3 class="h4 mb-0 fw-bold">
-                                                    <i class="bi bi-geo-alt me-2 text-primary"></i>[TITULO_MIS_DIRECCIONES]
+                                                    <i class="bi bi-geo-alt me-2 text-primary"></i>Mis Direcciones de Envío
                                                 </h3>
                                                 
                                                 <button class="btn btn-primary" 
                                                         type="button" 
                                                         data-bs-toggle="modal" 
                                                         data-bs-target="#addAddressModal">
-                                                    <i class="bi bi-plus-lg me-2"></i>[BOTON_AGREGAR_DIRECCION]
+                                                    <i class="bi bi-plus-lg me-2"></i>Agregar Dirección
                                                 </button>
                                             </div>
                                         </div>
@@ -314,12 +327,12 @@
                                         
                                         
                                         <div class="col-12 col-lg-6 mb-4">
-                                            <div class="card h-100 address-card">
+                                            <div class="card h-100 address-card border-primary">
                                                 <div class="card-body">
                                                     <div class="d-flex justify-content-between align-items-start mb-3">
                                                         <div class="address-type">
                                                             <span class="badge bg-primary">
-                                                                <i class="bi bi-house me-1"></i>[TIPO_CASA]
+                                                                <i class="bi bi-house me-1"></i>Casa
                                                             </span>
                                                         </div>
                                                         <div class="dropdown">
@@ -329,28 +342,28 @@
                                                                 <i class="bi bi-three-dots-vertical"></i>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>[EDITAR]</a></li>
-                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>[PREDETERMINADA]</a></li>
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>Editar</a></li>
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>Predeterminada</a></li>
                                                                 <li><hr class="dropdown-divider"></li>
-                                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>[ELIMINAR]</a></li>
+                                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     
                                                     <div class="address-info">
-                                                        <h5 class="card-title mb-2">[NOMBRE_DIRECCION_1]</h5>
+                                                        <h5 class="card-title mb-2">Juan Pérez González</h5>
                                                         <p class="card-text mb-2">
                                                             <i class="bi bi-geo-alt me-2 text-muted"></i>
-                                                            [CALLE_DIRECCION_1]<br>
-                                                            <span class="ms-4">[CIUDAD_DIRECCION_1], [CODIGO_POSTAL_1]</span>
+                                                            Av. Providencia 1234, Depto 501<br>
+                                                            <span class="ms-4">Providencia, Santiago</span>
                                                         </p>
                                                         <p class="card-text">
                                                             <i class="bi bi-telephone me-2 text-muted"></i>
-                                                            [TELEFONO_DIRECCION_1]
+                                                            +56 9 8765 4321
                                                         </p>
                                                         <div class="address-default">
                                                             <i class="bi bi-star-fill text-warning me-1"></i>
-                                                            <small class="text-muted">[DIRECCION_PREDETERMINADA]</small>
+                                                            <small class="text-muted">Dirección predeterminada</small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -364,7 +377,7 @@
                                                     <div class="d-flex justify-content-between align-items-start mb-3">
                                                         <div class="address-type">
                                                             <span class="badge bg-success">
-                                                                <i class="bi bi-building me-1"></i>[TIPO_OFICINA]
+                                                                <i class="bi bi-building me-1"></i>Oficina
                                                             </span>
                                                         </div>
                                                         <div class="dropdown">
@@ -374,24 +387,24 @@
                                                                 <i class="bi bi-three-dots-vertical"></i>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>[EDITAR]</a></li>
-                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>[PREDETERMINADA]</a></li>
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>Editar</a></li>
+                                                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>Predeterminada</a></li>
                                                                 <li><hr class="dropdown-divider"></li>
-                                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>[ELIMINAR]</a></li>
+                                                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     
                                                     <div class="address-info">
-                                                        <h5 class="card-title mb-2">[NOMBRE_DIRECCION_2]</h5>
+                                                        <h5 class="card-title mb-2">Juan Pérez - Trabajo</h5>
                                                         <p class="card-text mb-2">
                                                             <i class="bi bi-geo-alt me-2 text-muted"></i>
-                                                            [CALLE_DIRECCION_2]<br>
-                                                            <span class="ms-4">[CIUDAD_DIRECCION_2], [CODIGO_POSTAL_2]</span>
+                                                            Av. Apoquindo 4800, Piso 12<br>
+                                                            <span class="ms-4">Las Condes, Santiago</span>
                                                         </p>
                                                         <p class="card-text">
                                                             <i class="bi bi-telephone me-2 text-muted"></i>
-                                                            [TELEFONO_DIRECCION_2]
+                                                            +56 2 2345 6789
                                                         </p>
                                                     </div>
                                                 </div>
@@ -400,16 +413,16 @@
 
                                         
                                         <div class="col-12 col-lg-6 mb-4">
-                                            <div class="card h-100 add-address-card text-center border-dashed">
+                                            <div class="card h-100 add-address-card text-center border-dashed" style="border: 2px dashed #dee2e6;">
                                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                                                     <i class="bi bi-plus-circle text-muted mb-3" style="font-size: 3rem;"></i>
-                                                    <h5 class="card-title text-muted mb-2">[TITULO_AGREGAR_NUEVA]</h5>
-                                                    <p class="card-text text-muted mb-3">[DESCRIPCION_AGREGAR_DIRECCION]</p>
+                                                    <h5 class="card-title text-muted mb-2">Agregar Nueva Dirección</h5>
+                                                    <p class="card-text text-muted mb-3">Añade una nueva dirección de envío para tus pedidos</p>
                                                     <button class="btn btn-outline-primary" 
                                                             type="button" 
                                                             data-bs-toggle="modal" 
                                                             data-bs-target="#addAddressModal">
-                                                        <i class="bi bi-plus me-2"></i>[AGREGAR_DIRECCION]
+                                                        <i class="bi bi-plus me-2"></i>Agregar Dirección
                                                     </button>
                                                 </div>
                                             </div>
@@ -428,12 +441,13 @@
     </main>
 
     
+    <!-- Updated modal with Chilean regions -->
     <div class="modal fade" id="addAddressModal" tabindex="-1" aria-labelledby="addAddressModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5 fw-bold" id="addAddressModalLabel">
-                        <i class="bi bi-plus-circle me-2 text-primary"></i>[TITULO_MODAL_AGREGAR_DIRECCION]
+                        <i class="bi bi-plus-circle me-2 text-primary"></i>Agregar Nueva Dirección
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -445,22 +459,22 @@
                         <div class="row mb-3">
                             <div class="col-12">
                                 <label class="form-label fw-semibold">
-                                    <i class="bi bi-tags me-1"></i>[LABEL_TIPO_DIRECCION]
+                                    <i class="bi bi-tags me-1"></i>Tipo de Dirección
                                 </label>
                                 <div class="d-flex flex-wrap gap-2">
                                     <input type="radio" class="btn-check" name="addressType" id="typeHome" value="home" checked>
                                     <label class="btn btn-outline-primary" for="typeHome">
-                                        <i class="bi bi-house me-1"></i>[TIPO_CASA]
+                                        <i class="bi bi-house me-1"></i>Casa
                                     </label>
                                     
                                     <input type="radio" class="btn-check" name="addressType" id="typeOffice" value="office">
                                     <label class="btn btn-outline-success" for="typeOffice">
-                                        <i class="bi bi-building me-1"></i>[TIPO_OFICINA]
+                                        <i class="bi bi-building me-1"></i>Oficina
                                     </label>
                                     
                                     <input type="radio" class="btn-check" name="addressType" id="typeOther" value="other">
                                     <label class="btn btn-outline-info" for="typeOther">
-                                        <i class="bi bi-geo me-1"></i>[TIPO_OTRO]
+                                        <i class="bi bi-geo me-1"></i>Otro
                                     </label>
                                 </div>
                             </div>
@@ -471,87 +485,80 @@
                             
                             <div class="col-12 mb-3">
                                 <label for="addressName" class="form-label fw-semibold">
-                                    <i class="bi bi-bookmark me-1"></i>[LABEL_NOMBRE_DIRECCION]
+                                    <i class="bi bi-bookmark me-1"></i>Nombre de la Dirección
                                 </label>
                                 <input type="text" 
                                        class="form-control" 
                                        id="addressName" 
-                                       placeholder="[PLACEHOLDER_NOMBRE_DIRECCION]" 
+                                       placeholder="Ej: Casa de mis padres, Oficina central" 
                                        required>
-                                <div class="form-text">[AYUDA_NOMBRE_DIRECCION]</div>
+                                <div class="form-text">Un nombre descriptivo para identificar esta dirección</div>
                             </div>
 
                             
                             <div class="col-12 mb-3">
                                 <label for="street" class="form-label fw-semibold">
-                                    <i class="bi bi-signpost me-1"></i>[LABEL_CALLE_NUMERO]
+                                    <i class="bi bi-signpost me-1"></i>Calle y Número
                                 </label>
                                 <input type="text" 
                                        class="form-control" 
                                        id="street" 
-                                       placeholder="[PLACEHOLDER_CALLE_NUMERO]" 
+                                       placeholder="Av. Providencia 1234, Depto 501" 
                                        required>
                             </div>
 
                             
                             <div class="col-12 col-md-6 mb-3">
+                                <label for="region" class="form-label fw-semibold">
+                                    <i class="bi bi-map me-1"></i>Región
+                                </label>
+                                <select class="form-select" id="region" required>
+                                    <option value="">Selecciona una región...</option>
+                                    <option value="metropolitana">Región Metropolitana</option>
+                                    <option value="valparaiso">Valparaíso</option>
+                                    <option value="biobio">Biobío</option>
+                                    <option value="araucania">La Araucanía</option>
+                                    <option value="los-lagos">Los Lagos</option>
+                                    <option value="maule">Maule</option>
+                                    <option value="ohiggins">O'Higgins</option>
+                                    <option value="coquimbo">Coquimbo</option>
+                                </select>
+                            </div>
+
+                            
+                            <div class="col-12 col-md-6 mb-3">
                                 <label for="city" class="form-label fw-semibold">
-                                    <i class="bi bi-building me-1"></i>[LABEL_CIUDAD]
+                                    <i class="bi bi-building me-1"></i>Ciudad/Comuna
                                 </label>
                                 <input type="text" 
                                        class="form-control" 
                                        id="city" 
-                                       placeholder="[PLACEHOLDER_CIUDAD]" 
+                                       placeholder="Santiago, Providencia, Viña del Mar..." 
                                        required>
                             </div>
 
                             
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="postalCode" class="form-label fw-semibold">
-                                    <i class="bi bi-mailbox me-1"></i>[LABEL_CODIGO_POSTAL]
+                                    <i class="bi bi-mailbox me-1"></i>Código Postal
                                 </label>
                                 <input type="text" 
                                        class="form-control" 
                                        id="postalCode" 
-                                       placeholder="[PLACEHOLDER_CODIGO_POSTAL]" 
+                                       placeholder="8320000" 
                                        required>
                             </div>
 
                             
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="state" class="form-label fw-semibold">
-                                    <i class="bi bi-map me-1"></i>[LABEL_PROVINCIA]
-                                </label>
-                                <select class="form-select" id="state" required>
-                                    <option value="">[SELECCIONAR_PROVINCIA]</option>
-                                    <option value="provincia1">[PROVINCIA_1]</option>
-                                    <option value="provincia2">[PROVINCIA_2]</option>
-                                    <option value="provincia3">[PROVINCIA_3]</option>
-                                </select>
-                            </div>
-
-                            
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="country" class="form-label fw-semibold">
-                                    <i class="bi bi-globe me-1"></i>[LABEL_PAIS]
-                                </label>
-                                <select class="form-select" id="country" required>
-                                    <option value="ES" selected>[ESPAÑA]</option>
-                                    <option value="US">[ESTADOS_UNIDOS]</option>
-                                    <option value="MX">[MEXICO]</option>
-                                </select>
-                            </div>
-
-                            
-                            <div class="col-12 mb-3">
                                 <label for="addressPhone" class="form-label fw-semibold">
-                                    <i class="bi bi-telephone me-1"></i>[LABEL_TELEFONO_CONTACTO]
+                                    <i class="bi bi-telephone me-1"></i>Teléfono de Contacto
                                 </label>
                                 <input type="tel" 
                                        class="form-control" 
                                        id="addressPhone" 
-                                       placeholder="[PLACEHOLDER_TELEFONO_CONTACTO]">
-                                <div class="form-text">[AYUDA_TELEFONO_CONTACTO]</div>
+                                       placeholder="+56 9 1234 5678">
+                                <div class="form-text">Opcional: para coordinar la entrega</div>
                             </div>
 
                             
@@ -559,7 +566,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="isDefault">
                                     <label class="form-check-label fw-semibold" for="isDefault">
-                                        <i class="bi bi-star me-1"></i>[ESTABLECER_COMO_PREDETERMINADA]
+                                        <i class="bi bi-star me-1"></i>Establecer como dirección predeterminada
                                     </label>
                                 </div>
                             </div>
@@ -570,10 +577,10 @@
                 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        <i class="bi bi-x-lg me-2"></i>[CANCELAR]
+                        <i class="bi bi-x-lg me-2"></i>Cancelar
                     </button>
                     <button type="submit" form="addAddressForm" class="btn btn-primary">
-                        <i class="bi bi-check-lg me-2"></i>[GUARDAR_DIRECCION]
+                        <i class="bi bi-check-lg me-2"></i>Guardar Dirección
                     </button>
                 </div>
             </div>
@@ -581,18 +588,33 @@
     </div>
 
     
+    <!-- Updated footer to match other pages -->
     <footer class="bg-dark text-light py-4 mt-auto">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 Craft & Beer. [TODOS_DERECHOS_RESERVADOS]</p>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="fw-bold"><i class="bi bi-cup-hot me-2"></i>Craft & Beer</h5>
+                    <p class="small">Cervezas artesanales premium desde 2020</p>
                 </div>
-                <div class="col-12 col-md-6 text-center text-md-end">
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-                    </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h6 class="fw-bold">Enlaces</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="../us01/catalogo.html" class="text-light text-decoration-none">Catálogo</a></li>
+                        <li><a href="../us02/busqueda.html" class="text-light text-decoration-none">Buscar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold">Contacto</h6>
+                    <p class="small mb-1"><i class="bi bi-envelope"></i> info@craftbeer.cl</p>
+                    <p class="small mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+                    <p class="small"><i class="bi bi-geo-alt"></i> Santiago, Chile</p>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 small">&copy; 2025 Craft & Beer. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -602,35 +624,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     
+    <!-- Added functional form validation JavaScript -->
     <script>
-
-        console.log('[JAVASCRIPT_TABS_PLACEHOLDER]');
-        
-
+        // Profile form submission
         document.getElementById('profileForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
+            
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+                this.classList.add('was-validated');
+                return;
+            }
+            
+            alert('Perfil actualizado exitosamente');
+            this.classList.add('was-validated');
         });
         
-
+        // Address form submission
         document.getElementById('addAddressForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
-        });
-        
-
-        document.querySelectorAll('.address-card').forEach(card => {
-
-        });
-        
-
-        const triggerTabList = document.querySelectorAll('#profileTabs button');
-        triggerTabList.forEach(triggerEl => {
-            const tabTrigger = new bootstrap.Tab(triggerEl);
-            triggerEl.addEventListener('click', event => {
-                event.preventDefault();
-
-            });
+            
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+                this.classList.add('was-validated');
+                return;
+            }
+            
+            alert('Dirección agregada exitosamente');
+            bootstrap.Modal.getInstance(document.getElementById('addAddressModal')).hide();
+            this.reset();
+            this.classList.remove('was-validated');
         });
     </script>
 </body>
